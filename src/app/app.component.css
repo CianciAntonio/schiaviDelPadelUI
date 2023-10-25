@@ -1,0 +1,131 @@
+div{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+span{
+    display: flex; 
+    justify-content: center;
+}
+
+.navBar{
+    background-color: #0B132B;
+    height: 100px;
+    flex:100%;
+}
+
+.header{
+    background-color: #0B132B;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    padding:1%;
+}
+
+.legenda{
+    background-color: #0B132B;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding:1%;
+}
+
+.legendaText{
+    color: white;
+    font-size: 15px;
+    display: inline;
+    margin-right: 20px;
+}
+
+.legendaBox{
+    display: inline;
+    margin-right: 5px;
+}
+
+.title{
+    color: white;
+    font-size:40px;
+    font-style: italic;
+    line-height: 100px;
+    margin-left: 50px;
+}
+
+.centerBody{
+    background-color:lightblue;
+    height:1000px;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.slot{
+    background-color:#ECEBE4;
+    text-align: center;
+    color:black;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding:1%;
+    font-size: 30px;
+    transition: box-shadow 0.15s;
+}
+
+.slot:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+}
+
+.slot:active{
+    opacity: 0.4;
+}
+
+.reservedSlot{
+    background-color:#7B7263;
+    color:black;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding:1%;
+}
+
+.mySlot{
+    background-color:#05299E;
+    color:white;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding:1%;
+    transition: box-shadow 0.15s;
+}
+
+.mySlot:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+}
+
+.mySlot:active{
+    opacity: 0.4;
+}
+
+.inviteSlot{
+    background-color:#693668;
+    color:white;
+    width: 300px;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    padding:1%;
+}
+
+.yellowBox{
+    background-color: yellow;
+}
+
+.redBox{
+    background-color:red;
+}
+
+.greyBox{
+    background-color:blanchedalmond;
+}
+
+.greenBox{
+    background-color:greenyellow;
+}
