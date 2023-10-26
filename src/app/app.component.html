@@ -2,37 +2,13 @@
   <p class="title">Schiavi Del Padel</p>
 </div>
 
-<div class="centerBody">
-  <!-- <div class="legenda">
-    <span class="legendaBox">
-        
-    </span>
-    <span class="legendaText">Libero</span>
-    <span class="legendaBox">
+<div class="header">
+  <span class="headerText">{{currentDate | date:'MMMM y':'':'it-IT' | uppercase}}</span>
+  <span class="headerText">{{currentDate | date:'EEEE d':'':'it-IT' | uppercase}}</span>
+</div>
 
-    </span>
-    <span class="legendaText">Posti Disponibili</span>
-    <span class="legendaBox">
-
-    </span>
-    <span class="legendaText">Occupato</span>
-    <span class="legendaBox">
-
-    </span>
-    <span class="legendaText">Prenotato</span>
-  </div> -->
-
-  
-  <div class="header">
-    <span class="headerText">{{currentDate | date:'EEEE, d MMMM y':'':'it-IT' | uppercase}}</span>
+<div *ngFor="let timeSpan of timeSpans">
+  <div class="slot" [ngClass]="{'reservedSlot' : timeSpan.user}">
+    {{timeSpan.time.substring(11,16)}} {{timeSpan.user.toUpperCase()}}
   </div>
-  <!-- <div *ngFor="let timeSpan of timeSpans">
-    <div  class="slot" [ngClass]="{'reservedSlot' : timeSpan.user}">
-      {{timeSpan.ora}}  {{timeSpan.user}}
-    </div>
-  </div> -->
-  <div *ngFor="let timeSpan of timeSpans">
-    <div class="slot">
-      {{timeSpan.time | date:'HH:mm'}} {{timeSpan.user}}
-    </div>
-  </div>
+</div>

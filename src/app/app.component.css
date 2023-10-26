@@ -11,6 +11,7 @@ span{
     background-color: #0B132B;
     height: 100px;
     flex:100%;
+    border-radius: 10px;
 }
 
 .header{
@@ -20,7 +21,8 @@ span{
     text-align: center;
     font-size: 30px;
     border-radius: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     padding:1%;
 }
 
@@ -60,7 +62,6 @@ span{
 
 .slot{
     background-color:#ECEBE4;
-    text-align: center;
     color:black;
     width: 300px;
     border-radius: 20px;
