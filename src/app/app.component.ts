@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { SlotResponse } from './models/slotResponse.model';
 import { HttpClient } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { SlotRequest } from './models/slotRequest.model';
+import { DataService } from './service/data.service';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,7 @@ export class AppComponent {
   public daysOfWeek = []
   public slots?: SlotResponse[];
 
-  constructor(http: HttpClient) {
+  constructor(http: HttpClient, private data: DataService) {
     http
       .get<SlotResponse[]>(
         `https://localhost:7077/Slot/ByDate?date=${this.currentDateTimeString}`
@@ -54,5 +56,17 @@ export class AppComponent {
     }
     console.log(this.timeSpans)
     console.log(slots)
+  }
+
+  reserveSlot(time: string): void{
+    console.log(time)
+    
+    let addTime = {
+      UserId: 2,
+      DateTime: time.replace('/','-').replace('/','-')
+    }
+
+    this.data.addSlot('https://localhost:7077/Slot',addTime).subscribe(data=>{console.log(data)})
+
   }
 }

@@ -1,4 +1,4 @@
-div{
+div, button{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -63,7 +63,7 @@ span{
 .slot{
     background-color:#ECEBE4;
     color:black;
-    width: 300px;
+    width: 331px;
     border-radius: 20px;
     margin-bottom: 5px;
     padding:1%;
@@ -82,7 +82,7 @@ span{
 .reservedSlot{
     background-color:#7B7263;
     color:black;
-    width: 300px;
+    width: 331px;
     border-radius: 20px;
     margin-bottom: 5px;
     padding:1%;

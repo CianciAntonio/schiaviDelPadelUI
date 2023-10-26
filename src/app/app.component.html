@@ -8,7 +8,7 @@
 </div>
 
 <div *ngFor="let timeSpan of timeSpans">
-  <div class="slot" [ngClass]="{'reservedSlot' : timeSpan.user}">
+  <button (dblclick)="reserveSlot(timeSpan.time)" class="slot" [ngClass]="{'reservedSlot' : timeSpan.user}">
     {{timeSpan.time.substring(11,16)}} {{timeSpan.user.toUpperCase()}}
-  </div>
+  </button>
 </div>
