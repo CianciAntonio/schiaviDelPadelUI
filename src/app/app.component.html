@@ -3,12 +3,16 @@
 </div>
 
 <div class="header">
-  <span class="headerText">{{currentDate | date:'MMMM y':'':'it-IT' | uppercase}}</span>
-  <span class="headerText">{{currentDate | date:'EEEE d':'':'it-IT' | uppercase}}</span>
+  <button class="changeDateBtn" (dblclick)="previousDay()">-</button>
+  <span class="headerText">{{currentDate | date:'EEEE d MMMM':'':'it-IT' | uppercase}}</span>
+  <button class="changeDateBtn" (dblclick)="nextDay()">+</button>
 </div>
 
-<div *ngFor="let timeSpan of timeSpans">
-  <button (dblclick)="reserveSlot(timeSpan.time)" class="slot" [ngClass]="{'reservedSlot' : timeSpan.user}">
-    {{timeSpan.time.substring(11,16)}} {{timeSpan.user.toUpperCase()}}
+<div class="container" *ngFor="let slot of slots">
+  <div class="hours">
+    {{slot.dateTime | date:'HH:mm'}}
+  </div>
+  <button (dblclick)="reserveSlot(slot.dateTime)" class="slot" [ngClass]="{'reservedSlot' : slot.userName}">
+    {{slot.userName  | uppercase}}
   </button>
 </div>
