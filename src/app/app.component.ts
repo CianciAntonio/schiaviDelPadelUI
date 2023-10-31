@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { SlotResponse } from './models/slotResponse.model';
-import { TimeSpan } from './models/timeSpan.model';
-import { HttpClient } from '@angular/common/http';
-import { DatePipe } from '@angular/common';
-import { SlotRequest } from './models/slotRequest.model';
 import { DataService } from './service/data.service';
 
 @Component({
@@ -14,7 +10,7 @@ import { DataService } from './service/data.service';
 export class AppComponent {
   title = 'schiaviDelPadel';
 
-  currentDate: Date = new Date();
+  public currentDate = new Date();
   public currentDateTimeString = this.currentDate
     .toLocaleDateString()
     .replace(',', '');
@@ -38,7 +34,6 @@ export class AppComponent {
     }
 
     this.data.addSlot('https://localhost:7077/Slot',addTime).subscribe(data=>{console.log(data)})
-
   }
 
   nextDay(){

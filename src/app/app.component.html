@@ -3,9 +3,9 @@
 </div>
 
 <div class="header">
-  <button class="changeDateBtn" (dblclick)="previousDay()">-</button>
-  <span class="headerText">{{currentDate | date:'EEEE d MMMM':'':'it-IT' | uppercase}}</span>
-  <button class="changeDateBtn" (dblclick)="nextDay()">+</button>
+  <button class="changeDateLeft" (click)="previousDay()">&lt;</button>
+  <span class="currentDate">{{currentDate | date:'EEEE d MMMM':'':'it-IT' | uppercase}}</span>
+  <button class="changeDateRight" (click)="nextDay()">></button>
 </div>
 
 <div class="container" *ngFor="let slot of slots">
